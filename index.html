@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO-AIQ - Equivalent Carbon Output of AI Queries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 ECO-AIQ</h1>
+            <p class="tagline">Equivalent Carbon Output of AI Queries</p>
+            <p class="subtitle">Put your AI usage into perspective with everyday activities</p>
+        </header>
+
+        <main>
+            <div class="calculator-section">
+                <div class="input-group">
+                    <label for="activity-select">Choose a category:</label>
+                    <select id="activity-select">
+                        <option value="">Select an option...</option>
+                        <optgroup label="🚗 Transportation">
+                            <option value="drive-mile-gas">Drive 1 mile (gas car)</option>
+                            <option value="drive-mile-hybrid">Drive 1 mile (hybrid)</option>
+                            <option value="drive-mile-ev">Drive 1 mile (EV)</option>
+                            <option value="escooter-mile">E-scooter 1 mile</option>
+                            <option value="ebike-mile">E-bike 1 mile</option>
+                            <option value="bus-mile">Bus 1 mile</option>
+                            <option value="subway-mile">Subway 1 mile</option>
+                            <option value="flight-hour">Fly 1 hour (economy)</option>
+                            <option value="train-mile">Train 1 mile</option>
+                        </optgroup>
+                        <optgroup label="🍔 Food & Drink">
+                            <option value="hamburger">Eat a hamburger</option>
+                            <option value="chicken-meal">Chicken dinner</option>
+                            <option value="vegan-meal">Vegan meal</option>
+                            <option value="pizza">Large pizza</option>
+                            <option value="coffee">Cup of coffee</option>
+                            <option value="latte">Latte</option>
+                            <option value="beer">Pint of beer</option>
+                            <option value="steak">8oz steak</option>
+                        </optgroup>
+                        <optgroup label="🏠 Home & Daily">
+                            <option value="dishwasher">Run dishwasher</option>
+                            <option value="laundry-hot">Laundry (hot water)</option>
+                            <option value="laundry-cold">Laundry (cold water)</option>
+                            <option value="shower-5min">5-minute hot shower</option>
+                            <option value="bath">Take a bath</option>
+                            <option value="ac-hour">AC for 1 hour</option>
+                            <option value="kettle">Boil kettle</option>
+                        </optgroup>
+                        <optgroup label="💻 Technology">
+                            <option value="streaming">Stream Netflix 1hr</option>
+                            <option value="gaming-hour">Gaming 1 hour</option>
+                            <option value="zoom-hour">Zoom call 1 hour</option>
+                            <option value="email">Send an email</option>
+                            <option value="google-search">Google search</option>
+                        </optgroup>
+                        <optgroup label="🛍️ Shopping">
+                            <option value="tshirt">Buy a t-shirt</option>
+                            <option value="jeans">Buy jeans</option>
+                            <option value="delivery">Package delivery</option>
+                            <option value="phone-new">Buy new smartphone</option>
+                        </optgroup>
+                        <option value="custom-activity">✏️ Type your own activity...</option>
+                        <option value="custom-queries">🤖 Enter AI query count...</option>
+                    </select>
+                </div>
+
+                <div class="input-group" id="custom-query-input" style="display: none;">
+                    <label for="query-count">Number of AI queries:</label>
+                    <input type="number" id="query-count" min="1" placeholder="Enter number of queries">
+                </div>
+
+                <div class="input-group" id="custom-activity-div" style="display: none;">
+                    <label for="custom-activity-input">Describe your activity:</label>
+                    <input type="text" id="custom-activity-input" placeholder="e.g., 'ride e-scooter 10 miles' or 'eat 3 burgers'">
+                    <small class="help-text">Try including a number and activity like: drive 5 miles, fly 2 hours, drink 3 coffees</small>
+                </div>
+
+                <button id="calculate-btn" class="calculate-button">Calculate Equivalent</button>
+
+                <div id="results" class="results-section" style="display: none;">
+                    <div class="result-card">
+                        <h3 id="result-title"></h3>
+                        <p id="result-main"></p>
+                        <div id="result-comparison"></div>
+                        <div id="trade-off-suggestion" class="trade-off"></div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>📊 Quick Facts (2025 Data)</h3>
+                    <ul>
+                        <li>1 ChatGPT query = <strong>4.32g CO2e</strong></li>
+                        <li>That's 10x better than early estimates!</li>
+                        <li>But we're using AI billions of times daily...</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Based on latest 2025 research | Sam Altman's disclosed 0.3 Wh per query</p>
+            <p class="disclaimer">Carbon values are estimates and vary by region and grid mix</p>
+            <p><a href="methodology.html" class="methodology-link">📊 How are these numbers calculated?</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
