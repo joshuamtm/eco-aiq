@@ -44,6 +44,26 @@ header h1 {
     font-size: 1em;
     opacity: 0.9;
     font-style: italic;
+    margin-bottom: 15px;
+}
+
+.header-methodology-link {
+    display: inline-block;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-methodology-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 main {
